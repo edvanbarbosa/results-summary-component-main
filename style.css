@@ -1,5 +1,37 @@
 @charset "UTF-08";
 
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+
+    /* Primary-colors */
+
+    --light-red: #ff5757;
+    --orangey-yellow: #ffb01f;
+    --green-teal: #00bd91;
+    --cobalt-blue: #1125d4;
+
+    /*Opacity-colors*/
+    --opacity-light-red: hsla(0, 100%, 67%, 0.1);
+    --opacity-orangey-yellow: hsla(39, 100%, 56%, 0.1);
+    --opacity-green-teal: hsla(166, 100%, 37%, 0.1);
+    --opacity-cobalt-blue: hsla(234, 85%, 45%, 0.1);
+
+    /* Gradients */
+    --light-slate-blue: #7857ff;
+    --light-royal-blue: #2e2be9;
+    --violet-blue: #4e21ca;
+    --persian-blue: #2421ca00;
+
+    /* Neutral */
+    --white: #ffffff;
+    --pale-blue: #ebf1ff;
+    --light-lavender: #c8c7ff;
+    --dark-gray-blue: #303b5a;
+
+
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,14 +43,188 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: var(--pale-blue);
+    font-family: "Hanken Grotesk", sans-serif;
+    padding: 1em;
 }
 
 main{
-    height: 100%;
-    width: 100%;
+    height: 450px;
+    width: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--white);
+    border-radius: 32px;
+
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to top, var(--light-royal-blue), var(--violet-blue), var(--light-slate-blue));
+    border-radius: 32px;
+
+   
+}
+.sumary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.result > .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    width: 70%;
+    gap: 30px;
     
 }
 
+h1{
+    color: var(--light-lavender);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.circle-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 180px;
+    width: 180px;
+    background-color: var(--violet-blue);
+    border-radius: 50%;
+
+}
+
+.score-player{
+    color: var(--white);
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.max-score{
+    color: var(--light-lavender);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.classification{
+    color: var(--white);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.scored-higher{
+    color: var(--light-lavender);
+    text-align: center;
+}
+
+.sumary > .container{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 80%;
+    gap: 30px;
+
+}
+
+h2{
+    color: var(--dark-gray-blue);
+    font-size: 1.2rem;
+}
+
+ul.sumary-itens{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.sumary-item{
+ background-color: rgba(128, 128, 128, 0.106);
+ color: #303b5a;   
+ border-radius: 5px;
+ display: flex;
+ padding: 15px;
+ justify-content: space-between;
+}
+
+.question{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.grade-user{
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+}
+.grade-max{
+    color: var(--light-lavender);
+    font-weight: 700;
+}
+
+.reaction{
+    background-color: var(--opacity-light-red);
+}
+
+.reaction .question{
+    color: var(--light-red);
+}
+
+.memory{
+    background-color: var(--opacity-orangey-yellow);
+}
+
+.memory .question{
+    color: var(--orangey-yellow);
+}
+
+.verbal{
+    background-color: var(--opacity-green-teal);
+}
+
+.verbal .question{
+    color: var(--green-teal);
+}
+
+.visual{
+    background-color: var(--opacity-cobalt-blue);
+}
+
+.visual .question{
+    color: var(--cobalt-blue);
+}
+
+.continue-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: .3s ease-in-out;
+
+}
+
+.continue-btn:hover{
+    background-color: var(--violet-blue);
+}
