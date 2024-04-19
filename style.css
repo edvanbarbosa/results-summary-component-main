@@ -69,7 +69,8 @@ main{
     background-image: linear-gradient(to top, var(--light-royal-blue), var(--violet-blue), var(--light-slate-blue));
     border-radius: 32px;
     animation: mudarLado 1s forwards;
-    transform: translateX(100%);
+    transform: translateX(100%) translateY(0%);
+ 
 
    
 }
@@ -238,7 +239,7 @@ ul.sumary-itens{
 
 @keyframes mudarLado{
     to{
-        transform: translateX(0);
+        transform: translateX(0) translateY(0);
     }
     
 }
@@ -267,6 +268,8 @@ ul.sumary-itens{
         height: 45%;
         border-radius: 0 0 64px 64px;
         padding: 1px;
+        transform: translateX(0) translateY(-100%);
+
     }
 
     .sumary{
